@@ -3,7 +3,7 @@
 A full-stack AI-powered chatbot for enterprise support teams — built with **Ollama**, **LangChain**, **FastAPI**, and **React TypeScript**. Runs entirely **offline** on your local machine.
 
 <p align="center">
-  <img src="screenshots/ezgif-6394cdde16c31711.gif" alt="Demo" width="800"/>
+  <img src="screenshots/demo.gif" alt="Demo" width="800"/>
 </p>
 
 ---
