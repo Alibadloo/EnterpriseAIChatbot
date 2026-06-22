@@ -1,0 +1,31 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.env
+
+# Database & uploads
+backend/chatbot.db
+backend/uploads/
+backend/chroma_db/
+
+# Node
+frontend/chatbot-ui/node_modules/
+frontend/chatbot-ui/dist/
+frontend/chatbot-ui/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp

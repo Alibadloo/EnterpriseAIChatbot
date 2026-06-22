@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* ── theme variables ── */
+:root {
+  --bg:        #ffffff;
+  --bg2:       #f3f3f5;
+  --bg3:       #e8e8ec;
+  --border:    #d4d4d8;
+  --text:      #18181b;
+  --text2:     #52525b;
+  --text3:     #a1a1aa;
+  --accent:    #3b82f6;
+  --accent2:   #1d4ed8;
+  --shadow:    0 4px 24px rgba(0,0,0,0.10);
+  --shadow-nm: 6px 6px 14px #c8c8cc, -6px -6px 14px #ffffff;
+  --shadow-nm-in: inset 4px 4px 10px #c8c8cc, inset -4px -4px 10px #ffffff;
+  --knob-glow: #3b82f6;
+}
+
+.dark {
+  --bg:        #0f0f0f;
+  --bg2:       #1a1a1a;
+  --bg3:       #242424;
+  --border:    #2e2e2e;
+  --text:      #fafafa;
+  --text2:     #a1a1aa;
+  --text3:     #52525b;
+  --accent:    #e879f9;
+  --accent2:   #c026d3;
+  --shadow:    0 4px 24px rgba(0,0,0,0.5);
+  --shadow-nm: 6px 6px 14px #080808, -6px -6px 14px #222222;
+  --shadow-nm-in: inset 4px 4px 10px #080808, inset -4px -4px 10px #222222;
+  --knob-glow: #e879f9;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; transition: background .3s, color .3s; }
+#root { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* animations */
+@keyframes spin    { from { transform: rotate(0deg); }  to { transform: rotate(360deg); } }
+@keyframes fadeUp  { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+@keyframes blink   { 0%,100%{opacity:1;} 50%{opacity:0;} }
+@keyframes glowPulse { 0%,100%{filter:drop-shadow(0 0 6px var(--knob-glow));} 50%{filter:drop-shadow(0 0 14px var(--knob-glow));} }
+@keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.35;} }
+
+.msg-enter { animation: fadeUp .2s ease both; }
+.cursor    { display:inline-block; width:2px; height:1em; background:var(--text); animation: blink .7s infinite; vertical-align:text-bottom; margin-left:2px; }
